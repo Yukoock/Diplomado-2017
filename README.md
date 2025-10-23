@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+# Automatización de procesos
 
-You can use the [editor on GitHub](https://github.com/Yukoock/Diplomado-2017/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Este repositorio contiene ejemplos orientados a la automatización de tareas en distintos contextos. Además de los cuadernos de demostración originales, se incluye ahora un ejemplo completo para administrar un salón de belleza mediante una API REST construida con Flask.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Contenido destacado
 
-### Markdown
+- `salon_automation/`: módulo listo para usarse en la gestión de un salón de belleza. Permite registrar servicios, definir estilistas con sus horarios y agendar citas verificando disponibilidad.
+- `whatsapp_bot/`: ejemplo de chatbot para WhatsApp utilizando Twilio y Flask.
+- `tests/`: suite de pruebas automatizadas para validar la lógica de negocio.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Requisitos
 
-```markdown
-Syntax highlighted code block
+Se recomienda crear un entorno virtual con Python 3.9+ e instalar las dependencias según las necesidades de cada módulo (`salon_automation/requirements.txt`, `whatsapp_bot/requirements.txt`).
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r salon_automation/requirements.txt
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Ejecutar las pruebas
 
-### Jekyll Themes
+La suite de pruebas se puede ejecutar con:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Yukoock/Diplomado-2017/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```bash
+pytest
+```
 
-### Support or Contact
+## Próximos pasos sugeridos
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+- Integrar persistencia con una base de datos para guardar los registros del salón.
+- Añadir una interfaz web o móvil para el personal del negocio.
+- Conectar el chatbot de WhatsApp con la agenda del salón para confirmar citas automáticamente.
